@@ -1,0 +1,30 @@
+{
+   "CompanyData": [
+    {
+    "company name": "julinat technical services",
+    "email" : "admin@julinatech.com",
+    "phone" : "+234 0806567869",
+    "address": "kldeejnj"
+}
+   ],
+    
+    "inventory data": [
+        {
+            "company name":"julinat technical services",
+            "product name": "gate industrial belt",
+            "quantity in stock": "7",
+            "price" : 200
+        },
+        {
+            "product name": "safety valve",
+            "quantity in stock": "28",
+            "price" : 112
+        },
+        {
+            "product name": "water dispenser",
+            "quantity in stock": "63",
+            "price" : 289
+        }
+    ]
+
+}
