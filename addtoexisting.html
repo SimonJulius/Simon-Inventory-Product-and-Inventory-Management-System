@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form action="">
+                <label for="name">Product Name: <input type="text" class="name"></label>
+                <label for="quantity">Product Quantity: <input type="text" class="quantity"></label>
+                <label for=""><input type="submit" value="Submit" class="Creat Product" ></label>
+            </form>
+            <script src ="jquery.js"></script>
+    <script>
+          
+          $(document).ready(function () {
+              let product;
+              $('form').on('submit', function(event){
+                  event.preventDefault();
+                  let productName = $('.name').val();
+                  let quantity = $('.quantity').val();
+                
+              $.ajax({
+                  url: `http://localhost:3000/inventory-data`, success: function (result) {
+                  if(result.length){
+                  result.forEach(res=>{
+                  
+                   if(res.productName === productName){
+                     product = res
+                   }
+                  })
+                  if(product === undefined){
+                      alert('Create Product First')
+                  }else{
+                  $.ajax({
+                  url: "http://localhost:3000/inventory-data/"+product.id, success: function (response) {
+                  
+  
+  
+                  },
+                  method: "PUT",
+                  data: {
+                      productName,
+                      quantity:parseInt(product.quantity) + parseInt(quantity)
+                  }
+              })};
+              }
+                  },
+                  method: "GET",
+              })
+              
+          })
+  
+      })
+                  
+      </script>
+                
+    </script>
+</body>
+</html>
