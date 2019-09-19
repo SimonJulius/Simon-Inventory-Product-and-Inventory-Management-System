@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Product Name: <input type="text" id="name"></label>
+        <label for="quantity">Product Quantity: <input type="text" id="quantity"></label>
+        <label for="quantity">Table Number: <input type="text" id="tableNo"></label>
+        <label for=""><input type="submit" value="Submit" name="Creat Product" ></label>
+    </form>
+    <script src ="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('form').on('submit', function(event){
+                event.preventDefault();
+                let productName = $('#name').val();
+                let quantity = $('#quantity').val();
+                let tableNo = $("tableNo").val()
+            $.ajax({
+                url: "http://localhost:3000/inventory-data", success: function (result) {
+                    
+                },
+                method: "POST",
+                data: {
+                    productName,
+                    quantity,
+                    tableNo
+                }
+            });
+        })
+
+        });
+
+    </script>
+</body>
+</html>

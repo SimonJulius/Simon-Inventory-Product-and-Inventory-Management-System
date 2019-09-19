@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Goods In Stock</h3>
+    <div class="table">
+    <div class="table-responsive">
+        <table class="table-bordered table-hover" style="margin:0; padding: 0" width="100%">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Serial Number</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Quantity</th>
+
+                </tr>
+            </thead>
+            <tbody id="tbody" style="background-color:salmon">
+                
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+
+
+    <script src ="jquery.js"></script>
+    <script>
+
+        $(document).ready(function (){
+            getJsonData()
+        })
+
+        function getJsonData (){
+            $.ajax({
+                method: 'GET',
+                url: 'http://localhost:3000/inventory-data',
+                dataType: 'json',
+                success: onSuccess,
+                error: onError
+                })
+        }
+
+        function onSuccess(jsonFile){
+            $('#tbody').empty();
+
+            let sn = 1
+            for (let element of jsonFile){
+                $('#tbody').append(
+                    `<tr>
+                        <td>${sn++}</td>
+                        <td>${element.productName}</td>
+                        <td>${element.quantity}</td>
+
+                    </tr>
+                    `
+                )
+            }
+        }
+        
+        function onError(){
+            $(".table").html('An error')
+        }
+
+        $(".nameForm").on('submit', productData);
+        let quant;
+        let tableNo;
+        function productData(data){
+            data.preventDefault();
+            let productName = $(".productName").val();
+            $.ajax({
+                  url: `http://localhost:3000/inventory-data`, success: function (result) {
+                  if(result.length){
+                  result.forEach(res=>{
+                  
+                   if(res.productName === productName){
+                     quant = res.quantity;
+                     tableNo = res.tableNo;
+                   }
+                  })
+              }
+              if (quant > 1){
+                alert(`We have ${quant} pieces of ${productName} in table ${tableNo}`)
+                }else if(quant === 1){
+                    alert (`We have ${quant} piece of ${productName} in table ${tableNo}`)
+                }else{
+                    alert(`We have no ${productName}`)
+                }
+            },
+                  method: "GET"
+                })
+                
+        }
+    
+    </script>
+    <script>
+    </script>    
+    
+</body>
+</html>
