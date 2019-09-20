@@ -12,6 +12,12 @@ form{
     min-height: 20px
 }
 
+h3 {
+    color: darkblue;
+    text-align: center;
+    text-size-adjust: 7px;
+}
+
 input {
     font-size: 120%;
     color: #5a5854;
