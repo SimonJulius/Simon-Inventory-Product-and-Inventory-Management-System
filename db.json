@@ -11,6 +11,86 @@
       "quantity": "40",
       "tableNo": 8,
       "id": 2
+    },
+    {
+      "productName": "Gauge Valve",
+      "quantity": "56",
+      "id": 3
+    },
+    {
+      "productName": "Butterfly Valve",
+      "quantity": "98",
+      "id": 4
+    },
+    {
+      "productName": "Feed Pumps",
+      "quantity": "89",
+      "id": 5
+    },
+    {
+      "productName": "Tanker Valve",
+      "quantity": "109",
+      "id": 6
+    },
+    {
+      "productName": "Process Valve",
+      "quantity": "67",
+      "id": 7
+    },
+    {
+      "productName": "Handwheel",
+      "quantity": "66",
+      "id": 8
+    },
+    {
+      "productName": "Relieve Valve",
+      "quantity": "200",
+      "id": 9
+    },
+    {
+      "productName": "Nut Pack",
+      "quantity": "3000",
+      "id": 10
+    },
+    {
+      "productName": "Jasmine",
+      "quantity": "23",
+      "id": 11
+    },
+    {
+      "productName": "Jasmine",
+      "quantity": "23",
+      "id": 12
+    },
+    {
+      "productName": "Standalones",
+      "quantity": "56",
+      "id": 13
+    },
+    {
+      "productName": "Curtis Smack",
+      "quantity": "55",
+      "id": 14
+    },
+    {
+      "productName": "Instrumentation Machine ",
+      "quantity": "2",
+      "id": 15
+    },
+    {
+      "productName": "Safety Valve",
+      "quantity": "35",
+      "id": 16
+    },
+    {
+      "productName": "Safety Valve",
+      "quantity": "35",
+      "id": 17
+    },
+    {
+      "productName": "Safety Valve",
+      "quantity": "35",
+      "id": 18
     }
   ]
 }

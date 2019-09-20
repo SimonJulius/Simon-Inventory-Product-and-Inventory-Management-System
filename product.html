@@ -8,10 +8,16 @@
     <title>Document</title>
 </head>
 <body>
+        <ul>    <li><a href="index.html">Front Page</a></li>
+                <li><a href="product.html">What we have in stock</a></li>
+                <li><a href="addtoexisting.html">Add to existing product</a></li>
+                <li><a href="addnewprod.html">Add new product</a></li>
+                <li><a href="remove.html">Remove a product</a></li>
+                </ul>
     <h3>Goods In Stock</h3>
     <div class="table">
     <div class="table-responsive">
-        <table class="table-bordered table-hover" style="margin:0; padding: 0" width="100%">
+        <table class="table-bordered table-hover" style="margin:0; padding: 0; border: 2" width="100%">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Serial Number</th>
@@ -39,7 +45,7 @@
         function getJsonData (){
             $.ajax({
                 method: 'GET',
-                url: 'http://localhost:3000/inventory-data',
+                url: 'http://localhost:4000/inventory-data',
                 dataType: 'json',
                 success: onSuccess,
                 error: onError
@@ -56,9 +62,7 @@
                         <td>${sn++}</td>
                         <td>${element.productName}</td>
                         <td>${element.quantity}</td>
-
-                    </tr>
-                    `
+                    </tr>`
                 )
             }
         }

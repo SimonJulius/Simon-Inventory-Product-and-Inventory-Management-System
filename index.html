@@ -9,66 +9,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-  
     <header>
-      <img src="imgDirectory/logo.png" alt="logo" id="logo">
-      <h2 id="heading">T&T ENGINEERING SERVICES</h2>
-    </header>
+    <img src="imgDirectory/logo.png" alt="logo" id="logo">
+    <nav>
+        <ul>
+        <li><a href="index.html">Front Page</a></li>
+        <li><a href="product.html">What we have in stock</a></li>
+        <li><a href="addtoexisting.html">Add to existing product</a></li>
+        <li><a href="addnewprod.html">Add new product</a></li>
+        <li><a href="remove.html">Remove a product</a></li>
+        </ul>
+    </nav>
     <h3>Product and Inventory Management System</h3>
-    <div id="nav">
-      <div class = "links">
-        <a href="product.html">What we have in stock</a>
-        <a href="addtoexisting.html">Add to existing product</a>
-        <a href="addnewprod.html">Add new product</a>
-        <a href="remove.html">Remove a product</a>
-      </div>
-      <div class="image">
-        <img src="imgDirectory/inventory1.jpg" alt="Inventory" id="img">
-      </div>
+    <div class="navBar">
     </div>
-
-    <form action="" class="nameForm">
-        <label for="">Product Name: <input type="text" class="productName"></label>
-        <label for=""><input type="submit" value="Submit" name="Search" ></label>
-    </form>
-
-
-    <script src ="jquery.js"></script>
-    <script>
-
-$(".nameForm").on('submit', productData);
-        let quant;
-        let tableNo;
-        function productData(data){
-            data.preventDefault();
-            let productName = $(".productName").val().toLowerCase();
-            $.ajax({
-                  url: `http://localhost:3000/inventory-data`, success: function (result) {
-                  if(result.length){
-                  result.forEach(res=>{
-                  
-                   if(res.productName.toLowerCase() === productName){
-                     quant = res.quantity;
-                     tableNo = res.tableNo;
-                   }
-                  })
-              }
-              if (quant > 1){
-                alert(`We have ${quant} pieces of ${productName} in table ${tableNo}`)
-                }else if(quant === 1){
-                    alert (`We have ${quant} piece of ${productName} in table ${tableNo}`)
-                }else{
-                    alert(`We have no ${productName}`)
-                }
-            },
-                  method: "GET"
-                })
-                
-        }
-    
-    </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
