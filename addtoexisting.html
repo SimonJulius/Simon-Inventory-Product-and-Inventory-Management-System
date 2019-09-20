@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="addto.css">
     <title>Document</title>
 </head>
 <body>
+        <ul>    <li><a href="index.html">Front Page</a></li>
+                <li><a href="product.html">What we have in stock</a></li>
+                <li><a href="addtoexisting.html">Add to existing product</a></li>
+                <li><a href="addnewprod.html">Add new product</a></li>
+                <li><a href="remove.html">Remove a product</a></li>
+                </ul>
+    <div class="form-group">
+    <div class="field">
+     <fieldset>
         <form action="">
-                <label for="name">Product Name: <input type="text" class="name"></label>
-                <label for="quantity">Product Quantity: <input type="text" class="quantity"></label>
-                <label for=""><input type="submit" value="Submit" class="Creat Product" ></label>
-            </form>
+            <label for="name">Product Name: <input type="text" class="name"></label>
+            <label for="quantity">Product Quantity: <input type="number" class="quantity"></label>
+            <label for=""><input type="submit" value="Submit" class="Creat Product" ></label>
+        </form>
+     </fieldset>
+    </div>
             <script src ="jquery.js"></script>
+    </div>
     <script>
           
           $(document).ready(function () {
@@ -58,5 +72,6 @@
       </script>
                 
     </script>
+    
 </body>
 </html>

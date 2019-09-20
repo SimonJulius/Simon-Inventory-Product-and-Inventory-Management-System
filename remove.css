@@ -1,0 +1,76 @@
+body{
+    background-image: url(imgDirectory/igmInvt.jpg);
+    margin: 0;
+}
+header {
+    background-color: white;
+    height: 1em;
+
+}
+form{
+    margin: auto;
+    min-width: 30px;
+    min-height: 20px
+}
+
+input {
+    font-size: 120%;
+    color: #5a5854;
+    background-color: #f1d7d7;
+    border: 2px solid #ee0606;
+    border-radius: 5px;
+    padding: 5px 5px 5px 30px;
+    background-repeat: no-repeat;
+    background-position: 8px 9px;
+    display: block;
+    margin-bottom: 10px;}
+    input:focus {
+    background-color: #ffffff;
+    border: 1px solid #b1e1e4;}
+    input#email {
+    background-image: url("images/email.png");}
+    input#twitter {
+    background-image: url("images/twitter.png");}
+    input#web {
+    background-image: url("images/web.png");}
+
+fieldset {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    border: 1px solid #dcdcdc;
+    background-color: azure;
+    border-radius: 10px;
+    padding: 20px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+
+}
+    legend {
+    background-color: #efefef;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+nav{
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    float: left;
+    min-width: 100%;
+    text-align: left
+}

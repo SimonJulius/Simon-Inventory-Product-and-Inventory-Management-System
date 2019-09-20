@@ -1,37 +1,28 @@
-
-header {
-    background-color: white;
-    height: 1em;
-    width: 100%
-}
-
-
-#logo{
-    height: 10px;
-    width: 10px
-}
-#heading{
-    display: inline;
-}
 body{
-    background-color: #FE2323;
+    background-image: url(imgDirectory/igmInvt.jpg)
 }
-#nav {
-    display: flex;
-    height: 100%;
-}
-.image{
-    flex: 1;
-    color: #fe2323;
-}
+header {
+    background-color: rgb(245, 243, 243);
+    height: 1em;
 
-.img{
-    height: 100%;
-    width: 50%;
 }
-.links{
-    flex: 2;
+li{
+    display: inline;
+    margin: 20px;
+    padding: 20px;
 }
-a{
-    display: block;
+nav{
+    background-color: white;
+    max-height: 50px;
+}
+nav{
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    float: left;
+    min-width: 100%;
+    text-align: left
+}
+img{
+    z-index: 2;
 }
